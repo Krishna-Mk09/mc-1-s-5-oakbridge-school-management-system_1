@@ -3,20 +3,20 @@ package com.jap.marksevaluation;
 import java.util.Arrays;
 
 public class OakBridgeSchool {
-
     public static void main(String[] args) {
         OakBridgeSchool oakBridgeSchool = new OakBridgeSchool();
         // Declare and Initialize values to the arrays
         String[] studentNames = {"Michelle", "Kate", "Ann", "Tina", "Tom", "Sam", "Ria", "Pam", "Kate", "Leo"};
         String[] studentSurnames = {"Smith", "Johnson", "Williams", "Brown", "Jones", "Miller", "Davis", "Martin", "Clark", "King"};
         // Call the method to convert all the student names to upper case and display results
-        for (String studentName : studentNames) {
-            System.out.print(oakBridgeSchool.convertToUpperCase(studentName) + " ");
+        for (String upperCaseStudentName : studentNames) {
+            System.out.println("uppercasestudentName = " + upperCaseStudentName);
         }
         // Call the method to sort names in alphabetical order and display results
         Arrays.sort(studentNames);
         System.out.println("\n" + Arrays.toString(studentNames));
         // Call the method to find the shortest surname and display results
+
         String shortSurname = oakBridgeSchool.shortestSurname(studentSurnames);
         System.out.println(shortSurname);
         // Call the method to check if two names in the array are the same and display results
@@ -26,22 +26,18 @@ public class OakBridgeSchool {
         oakBridgeSchool.displayStudentNames(namesArray);
     }
 
-    // Convert the given string name to upper case
-
     /**
      * It takes a string and returns the same string in uppercase
      *
-     * @param name The name of the method that will be called in the template.
+     * @param studentNames The name of the method that will be called in the template.
      * @return A string that is the uppercase version of the input string.
      */
-    public String convertToUpperCase(String name) {
-        if (name.equals("")) {
+    public String convertToUpperCase(String studentNames) {
+        if (studentNames.equals("")) {
             return " ";
         }
-        return name.toUpperCase();
+        return studentNames.toUpperCase();
     }
-
-    // Find the shortest word in the list of surnames
 
     /**
      * The function takes an array of strings and returns the shortest string in the array
@@ -59,8 +55,6 @@ public class OakBridgeSchool {
         return shortest;
     }
 
-    // Check if any of the names in the array is repeated, if yes return true else false
-
     /**
      * It checks if the names are repeated in the array
      *
@@ -68,23 +62,21 @@ public class OakBridgeSchool {
      * @return The method is returning a boolean value.
      */
     public boolean checkIfNamesAreRepeated(String[] names) {
-        boolean flag = false;
+        boolean temp = false;
         for (int index = 0; index <= names.length - 1; index++) {
             for (int count = index + 1; count <= names.length - 1; count++) {
                 if (names[index].equals(names[count])) {
                     if (index == count) {
-                        flag = false;
+                        temp = false;
                         break;
                     } else {
-                        flag = true;
+                        temp = true;
                     }
                 }
             }
         }
-        return flag;
+        return temp;
     }
-
-    // Concatenate the name and surname of the students
 
     /**
      * Given two arrays of strings, return an array of strings where each element is the concatenation of the corresponding
@@ -101,8 +93,6 @@ public class OakBridgeSchool {
         }
         return concatenatedNames;
     }
-
-    // Display the names
 
     /**
      * The function takes in an array of strings, and prints out the array
