@@ -30,29 +30,31 @@ public class OakBridgeSchoolTest {
 
 
     @Test
-    public void givenStringNameConvertToUpperCaseSuccess(){
-        assertEquals("TIM",oakBridgeSchool.convertToUpperCase("tim"));
-        assertEquals("CAREY",oakBridgeSchool.convertToUpperCase("cArEY"));
-        assertEquals("MALCOLM",oakBridgeSchool.convertToUpperCase("Malcolm"));
-        assertEquals("GARY JONES",oakBridgeSchool.convertToUpperCase("Gary Jones"));
-    }
-    @Test
-    public void givenStringNameConvertToUpperCaseFailure(){
-        assertEquals(" ",oakBridgeSchool.convertToUpperCase(""));
-        assertEquals(" ",oakBridgeSchool.convertToUpperCase(new String()));
+    public void givenStringNameConvertToUpperCaseSuccess() {
+        assertEquals("TIM", oakBridgeSchool.convertToUpperCase("tim"));
+        assertEquals("CAREY", oakBridgeSchool.convertToUpperCase("cArEY"));
+        assertEquals("MALCOLM", oakBridgeSchool.convertToUpperCase("Malcolm"));
+        assertEquals("GARY JONES", oakBridgeSchool.convertToUpperCase("Gary Jones"));
     }
 
     @Test
-    public void givenSurnameArrayReturnShortestSurname(){
-        assertEquals("King",oakBridgeSchool.shortestSurname(studentSurnames));
+    public void givenStringNameConvertToUpperCaseFailure() {
+        assertEquals(" ", oakBridgeSchool.convertToUpperCase(""));
+        assertEquals(" ", oakBridgeSchool.convertToUpperCase(""));
     }
+
     @Test
-    public void givenNameArrayReturnTrueIfNamesAreRepeatedOrFalse(){
+    public void givenSurnameArrayReturnShortestSurname() {
+        assertEquals("King", oakBridgeSchool.shortestSurname(studentSurnames));
+    }
+
+    @Test
+    public void givenNameArrayReturnTrueIfNamesAreRepeatedOrFalse() {
         assertTrue(oakBridgeSchool.checkIfNamesAreRepeated(studentNames));
-        assertTrue(oakBridgeSchool.checkIfNamesAreRepeated(new String[]{"John","John","Anne","Pam"}));
-        assertTrue(oakBridgeSchool.checkIfNamesAreRepeated(new String[]{"John","Gary","Anne","John"}));
-        assertTrue(oakBridgeSchool.checkIfNamesAreRepeated(new String[]{"John","John","John","Pam"}));
-        assertFalse(oakBridgeSchool.checkIfNamesAreRepeated(new String[]{"Mathew","John","Anne","Pam"}));
+        assertTrue(oakBridgeSchool.checkIfNamesAreRepeated(new String[]{"John", "John", "Anne", "Pam"}));
+        assertTrue(oakBridgeSchool.checkIfNamesAreRepeated(new String[]{"John", "Gary", "Anne", "John"}));
+        assertTrue(oakBridgeSchool.checkIfNamesAreRepeated(new String[]{"John", "John", "John", "Pam"}));
+        assertFalse(oakBridgeSchool.checkIfNamesAreRepeated(new String[]{"Mathew", "John", "Anne", "Pam"}));
         assertFalse(oakBridgeSchool.checkIfNamesAreRepeated(new String[]{"John"}));
     }
 }
