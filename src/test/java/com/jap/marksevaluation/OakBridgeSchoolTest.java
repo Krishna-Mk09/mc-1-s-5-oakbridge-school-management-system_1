@@ -1,6 +1,5 @@
 package com.jap.marksevaluation;
 
-import com.jap.marksevaluation.OakBridgeSchool;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
